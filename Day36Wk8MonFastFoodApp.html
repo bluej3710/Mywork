@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="Day32button.css">
+    <body>
+    <!-- In case you want to add a webpage -->
+        <form action="fastfoodapp">
+            <b>Full Name:</b> <input id="fullname" type="text" placeholder="Full Name Here" name="firstname"pattern="[a-z,A-Z]"{1,100}><br>
+            <b>PlaceOrders Here:</b>
+            <input id="order#1" type="text" placeholder="French Fries" name="inputfood"   maxlength="10" pattern="[a-z,A-Z]{10}">-
+            <input id="order#2" type="text" placeholder="Burger" name="inputfood" size  maxlength="10" pattern="[a-z,A-Z]{10}">-
+            <input id="order#3" type="text"  placeholder="Drink" name="inputdrink"  maxlength=10 pattern="[a-z,A-Z]{10}">-
+            <input id="order#4" type="text" placeholder="Shakes" name="inputdrink" maxlength=10 pattern="[a-z,A-Z]{10}"><br>
+            <span>Ex:Large-Cheeseburger-Coke-Oreo</span><br>
+            <!-- Why Does button work here but not at bottom of the page? How can I get to check everything on the final submit? When clicked should bring customers orders to the kitchen to see on there page maybe? -->
+            <input type="submit" value="Order4Kitchen" onsubmit="confirmInput()">
+        </form>
+            
+<!--Event Listener Using js very difficult still need help with syntax & customerOrderconsole.log somehow get to repeat cutomers order-->
+<script>
+    document.getElementById("submit").addEventListener("click", function confirmInput(){
+        fname = document.forms[0].fname.value;
+  alert("Hello " + fname + "! You will now be redirected to www.anotherpage that bring up customers order.com");
+}
+  document.getElementById("demo").innerHTML = "Saves Customer Order to variable name Customer Order";
+});
+    }
+    </script>
+    
+<!--Would be cool to be able right the Js for add up cutomers Total & Repeat Order back to customer but seems complex-->    
+    <input type="submit" value="Customer Order & Total">
+</body>
+</html>

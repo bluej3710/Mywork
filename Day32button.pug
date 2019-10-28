@@ -1,0 +1,43 @@
+doctype html
+| PASTE YOUR HTML CODE HERE
+link(rel='stylesheet' type='text/css' href='Day32button.css')
+// In case you want to add a webpage
+form(action='telephone')
+  b Full Name:
+  input#fullname(type='text' placeholder='Full Name Here' name='firstname' pattern='[a-z,A-Z]' {1,100}='')
+  br
+  b Phone#:
+  |             (
+  input(id='phone#1' type='tel' placeholder='Areacode Here' name='areacode' size='1' onkeyup='autotab(this, document.telephone.phone1)' maxlength='3' pattern='[0-9]{3}')
+  | )-
+  input(id='phone#2' type='tel' name='mid' size='1' onkeyup='autotab(this, document.telephone.phone2)' maxlength='3' oninput='autotab(this, document.formName.inputName)' pattern='[0-9]{3}')
+  | -
+  input(id='phone#3' type='tel' name='lastfour' size='1' onkeyup='autotab(this, document.telephone.phone3)' maxlength='4' oninput='autotab(this, document.formName.inputName)' pattern='[0-9]{4}')
+  br
+  span Format:123-456-7890
+  // Why Does button work here but not at bottom of the page? How can I get to check everything on the final submit?
+  input(type='submit' value='Submit')
+form(name='email')
+  b Email
+  input(type='text' placeholder='Enter Email Here Prefix' maxlength='20' pattern='(?!test@test\.com$)[a-z0-9._%+-]{3,}@[a-z]{3,}\.[a-z]{2,}(?:\.[a-z]{2,})?')
+  | @
+  input(type='text' placeholder='.com Domain' maxlength='7' name='inputName')
+  span Ex:myaccountname@whatever.com
+// Example Trying to Auto Tab over using js
+script.
+  function autotab(current,to){
+  if (current.getAttribute &&
+  current.value.length==current.getAttribute("maxlength")) {
+  to.focus()
+  }
+  }
+b Enter your bussiness phone number ex (1-888-555-1234):
+form(name='telephone1')
+  input(type='text' name='phone0' size='2' onkeyup='autotab(this, document.telephone1.phone1)' maxlength='1')
+  | - 
+  input(type='text' name='phone1' size='4' onkeyup='autotab(this, document.telephone1.phone2)' maxlength='3')
+  | - 
+  input(type='text' name='phone2' size='4' onkeyup='autotab(this, document.telephone1.phone3)' maxlength='3')
+  | - 
+  input(type='text' name='phone3' size='5' maxlength='4')
+input(type='submit' value='Submit')
