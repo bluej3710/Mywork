@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <h1><u>Tasty Shakes & Burgers Restaurant</u></h1>
 <link rel="stylesheet" type="text/css" href="Day32button.css">
     <body>
     <!-- In case you want to add a webpage -->
@@ -12,11 +13,16 @@
             <input id="order#4" type="text" placeholder="Shakes" name="inputdrink" maxlength=10 pattern="[a-z,A-Z]{10}"><br>
             <span>Ex:Large-Cheeseburger-Coke-Oreo</span><br>
             <!-- Why Does button work here but not at bottom of the page? How can I get to check everything on the final submit? When clicked should bring customers orders to the kitchen to see on there page maybe? -->
-            <input type="submit" value="Order4Kitchen" onsubmit="confirmInput()">
+            <input type="submit" value="Order4Kitchen" onsubmit="confirmInput()"><br>
+            
+            <!--Will this way also work for the button feature?-->
+            <button onclick="confirmInput();">Order4Kitchen</button>
+        
         </form>
             
 <!--Event Listener Using js very difficult still need help with syntax & customerOrderconsole.log somehow get to repeat cutomers order-->
 <script>
+
     document.getElementById("submit").addEventListener("click", function confirmInput(){
         fname = document.forms[0].fname.value;
   alert("Hello " + fname + "! You will now be redirected to www.anotherpage that bring up customers order.com");
@@ -25,8 +31,47 @@
 });
     }
     </script>
+   
+   <!--Tues Ex Menu as Object-->
+    <script>
+    var Menu = {                 // object name
+        FrenchFries:50,           // list of properties and values
+        Burger:100,
+        Drink:200,
+        Shakes:300,
+        fullName : function() {     // object function
+           return this.FrenchFries + " " + this.Burger;
+        }
+    }; 
+//Making Menu an Array
+    var Menu = ["FrenchFries", "Burger", "Drink", "Shakes"]; 
+var Menu = new Array("FrenchFries", "Burger", "Drink", "Shakes");
     
-<!--Would be cool to be able right the Js for add up cutomers Total & Repeat Order back to customer but seems complex-->    
-    <input type="submit" value="Customer Order & Total">
+//Making the For Loop
+    for (var i = 0; i < 10; i++) {
+    document.write(i + ": " + i*3 + "<br />");
+}
+var sum = 0;
+for (var i = 0; i < a.length; i++) {
+    sum + = a[i];
+}               // parsing an array
+html = "";
+for (var i of custOrder) {
+    html += "<li>" + i + "</li>";
+}
+
+var customersOrder= "FrenchFries,Burger,Drinks,Shakes"
+    customersOrder.split(",");
+    console.log(output[2]); 
+    </script>
+
+<!--Would be cool to be able right the Js for add up customers Total & Repeat Order back to customer but seems complex-->    
+    <input type="submit" value="Customer Order & Total"><br>
+    <input type="button" value="Inventory of Stock"><br>
+    <input type="datetime-local" value="Current Time">
+    
+    <!--Would be able to put an Adobe video for the Menu here-->    
+    <object width="400" height="400" data="Menu.swf">
+    </object>
 </body>
 </html>
