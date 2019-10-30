@@ -5,7 +5,7 @@ body {
     height: 100vh;
     font-family: "Exo", sans-serif;
     color: #fff;
-    background: linear-gradient(-45deg, #1eff00, #ffffff, #23a6d5, #000000);
+    background: linear-gradient(-45deg, #1eff00, #fd0000, #23a6d5, #000000);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     text-align: center;
@@ -36,5 +36,6 @@ color:#000000;
 text-shadow: 1px 2px 2px #000000;
 }
 h1 {
-    color:#000000;
+    color:#1100ff;
 text-shadow: 1px 2px 2px #000000;
+
