@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <h1><u>Tasty Shakes & Burgers Restaurant</u></h1>
+<link rel="stylesheet" type="text/css" href="FastFood.css">
+<link rel="stylesheet" type="javascript" href="NodejsServer4FastFoodApp.js">
+    <body>
+        
+    <!-- In case you want to add a webpage -->
+        <form action="fastfoodapp">
+            <b>Full Name:</b> <input id="fullname" type="text" placeholder="Full Name Here" name="firstname"pattern="[a-z,A-Z]"{1,100}><br>
+            <b>PlaceOrders Here:</b><br>
+            <input id="order#1" type="text" placeholder="French Fries" name="Size" maxlength="10" pattern="[a-z,A-Z]{10}">-
+            <select>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            </select><br>
+            <input id="order#2" type="text" placeholder="Burger" name="inputfood" maxlength="10" pattern="[a-z,A-Z]{10}">-
+            <select>
+            <option value="regular">Regular</option>
+            <option value="exlarge">SuperSize</option>
+            </select><br>
+            <input id="order#3" type="text" placeholder="Drink" name="Size" maxlength=10 pattern="[a-z,A-Z]{10}">-
+            <select><br>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            </select><br>
+            <input id="order#4" type="text" placeholder="Shakes" name="Size" maxlength=10 pattern="[a-z,A-Z]{10}">-
+            <select>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            </select><br>
+            <span>Ex:CurlyFries-Small,
+                Cheeseburger-SuperSize,
+                Coke-Large,
+                Oreo-Small</span><br><br>
+                
+            <!-- Why Does button work here but not at bottom of the page? How can I get to check everything on the final submit? When clicked should bring customers orders to the kitchen to see on there page maybe? -->
+            <input type="submit" value="Order4Kitchen" onsubmit="confirmInput()"><br>
+            
+            <!--Will this way also work for the button feature?-->
+            <div id="change">
+            <button onclick="confirmInput();">Order4Kitchen/Change Content</button>
+            </div>
+        </form>
+        <p Id=result></p>
+<!--Event Listener Using js very difficult still need help with syntax & customerOrderconsole.log somehow get to repeat cutomers order-->
+<script>
+
+    document.getElementById("submit").addEventListener("click", function confirmInput(){
+        fname = document.forms[0].fname.value;
+  alert("Hello " + fname + "! You will now be redirected to www.anotherpage that bring up customers order.com");
+}
+  document.getElementById("result").innerHTML = "Saves Customer Order to variable name Customer Order";
+});
+    }
+    </script>
+   
+   <!--Tues Ex Menu as Object-->
+    <script>
+    var Menu = {                 // object name
+        FrenchFries:50,           // list of properties and values
+        Burger:100,
+        Drink:200,
+        Shakes:300,
+        fullName : function() {     // object function
+           return this.FrenchFries + " " + this.Burger;
+        }
+    }; 
+//Making Menu an Array
+    var Menu = ["FrenchFries", "Burger", "Drink", "Shakes"]; 
+var Menu = new Array("FrenchFries", "Burger", "Drink", "Shakes");
+    
+//Making the For Loop
+    for (var i = 0; i < 10; i++) {
+    document.write(i + ": " + i*3 + "<br />");
+}
+var sum = 0;
+for (var i = 0; i < a.length; i++) {
+    sum + = a[i];
+}               // parsing an array
+html = "";
+for (var i of custOrder) {
+    html += "<li>" + i + "</li>";
+}
+
+var customersOrder= "FrenchFries,Burger,Drinks,Shakes"
+    customersOrder.split(",");
+    console.log(output[2]); 
+    </script>
+
+
+<!--Sending Ajax request to server with content of customer's order-->
+<script>
+//Example of Ajax request syntax
+$("#demo").load("file.txt h1.main");                                // returns the h1 tag in the text file
+$("#demo").load("file.txt", function(responseTxt, statusTxt, xhr){  // callback function
+    if(statusTxt == "success") {
+        document.write("Content loaded successfully!"); 
+    } else {
+        document.write("Error: " + xhr.status + ": " + xhr.statusText); 
+    }
+});
+console.log("Error")
+
+//Mypart for Ajax Exercise Wed
+function customersOrder() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("change").innerHTML =
+      this.responseText;
+    } else {
+        console.log("Error");
+    }
+  };
+  xhttp.open("GET",localhost:8080, true);
+  xhttp.send();   //"https://swapi.co/documentation#root"
+}
+</script>
+
+
+<!--Would be cool to be able right the Js for add up customers Total & Repeat Order back to customer but seems complex-->    
+    <input type="submit" value="Customer Order & Total"><br>
+    <input type="button" value="Inventory of Stock"><br>
+    <input type="datetime-local" value="Current Time">
+    
+    <!--Would be able to put an Adobe video for the Menu here-->    
+    <object width="400" height="400" data="Menu.swf">
+    </object>
+</body>
+</html>

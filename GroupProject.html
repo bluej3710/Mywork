@@ -4,11 +4,20 @@
 <link rel="stylesheet" type="text/css" href="Day2button.css">
 <link rel="stylesheet" type="Admin" href=" ">
 <link rel="stylesheet" type="javascript" href="Lonnie javascript webpage link goes here.js">
+  <!-- 
+<form action="Search">
+        <b>Search Here:</b>
+        <input id="searchbar" type="text" placeholder="Search Here" name="search"pattern="[a-z,A-Z]"{1,100}><br>
+        <input type="submit" value="Submit"><br>-->
+
     <body>
     <!-- In case you want to add a webpage -->
+    <ul>
+    <li><a href="#Admin">Admin</a></li>
+    </ul>
         <form action="fullname">
             <b>Full Name(First,Last):</b>
-            <input id="fullname" type="text" placeholder="Full Name Here (First, Last)" name="firstname"pattern="[a-z,A-Z]"{1,100}><br>
+            <input id="fullname" type="text" placeholder="(First, Last)" name="firstname"pattern="[a-z,A-Z]"{1,100}><br>
         </form>
             <!--<b>Phone#:</b>
             (<input id="phone#1" type="tel" placeholder="Areacode Here" name="areacode" size=1 onKeyup="autotab(this, document.telephone.phone1)" maxlength="3" pattern="[0-9]{3}">)-
@@ -20,16 +29,22 @@
         
         <form name="email">
             <b>Email</b>
-            <input type="text" placeholder="Enter Email Here Prefix" maxlength="20" pattern="(?!test@test\.com$)[a-z0-9._%+-]{3,}@[a-z]{3,}\.[a-z]{2,}(?:\.[a-z]{2,})?">@<input type="text" placeholder=".com Domain" maxlength="7" name="inputName"><br>
-            <span>Ex:myaccountname@whatever.com</span><br>
+            <input type="text" placeholder="JohnDoe@gmail.com" maxlength="30" pattern="(?!test@test\.com$)[a-z0-9._%+-]{3,}@[a-z]{3,}\.[a-z]{2,}(?:\.[a-z]{2,})?"><br>
             </form>
             
             <form action="event">
-                    <b>Name of Event:</b>
+                    <b>Event Name:</b>
                     <input id="eventname" type="text" placeholder="Event Name Here" name="eventname"pattern="[a-z,A-Z]"{1,100}><br>
                     <input type="submit" value="Submit">
             </form>
-
+            <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                      <a href="#">Beer & Bytes</a>
+                      <a href="#">Augusta Dev</a>
+                      <a href="#">One Million Cups</a>
+                    </div>
+                  </div>
 
     <!--Extra Bonus if you wanted to add a bussiness phone#
     <b>Enter your bussiness phone number ex (1-888-555-1234):</b>
