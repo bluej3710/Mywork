@@ -15,7 +15,7 @@
             <option value="medium">Medium</option>
             <option value="large">Large</option>
             </select><br>
-            <input id="order#2" type="text" placeholder="Burger" name="inputfood" maxlength="10" pattern="[a-z,A-Z]{10}">-
+            <input id="order#2" type="text" placeholder="Burger" name="inputfood" maxlength="20" pattern="[a-z,A-Z]{10}">-
             <select>
             <option value="regular">Regular</option>
             <option value="exlarge">SuperSize</option>
@@ -120,7 +120,8 @@ function customersOrder() {
   xhttp.send();   //"https://swapi.co/documentation#root"
 }
 </script>
-
+<script src="db.js"></script>
+<script src="NodejsServer4FastFoodApp.js"></script>
 
 <!--Would be cool to be able right the Js for add up customers Total & Repeat Order back to customer but seems complex-->    
     <input type="submit" value="Customer Order & Total"><br>
