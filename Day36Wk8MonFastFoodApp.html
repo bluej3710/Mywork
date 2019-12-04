@@ -120,8 +120,32 @@ function customersOrder() {
   xhttp.send();   //"https://swapi.co/documentation#root"
 }
 </script>
+
 <script src="db.js"></script>
 <script src="NodejsServer4FastFoodApp.js"></script>
+
+
+<script>
+
+
+
+//Mypart for Ajax Exercise3 Wed 12/4/19
+ getinventory() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("change").innerHTML =
+      this.responseText;
+    } else {
+        console.log("Error");
+    }
+  };
+  xhttp.open("GET",localhost:8080/api/add,true);
+  xhttp.send();   //"https://swapi.co/api/show"
+}
+</script>
+
+
 
 <!--Would be cool to be able right the Js for add up customers Total & Repeat Order back to customer but seems complex-->    
     <input type="submit" value="Customer Order & Total"><br>
