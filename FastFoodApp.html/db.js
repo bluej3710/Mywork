@@ -34,13 +34,19 @@ con.connect(function(err) {
     });
   });
 
-  function get_all_inventory
-  /*return all items from inventory*/
-  function set_new_item
+
+/*return all items from inventory*/
+function get_all_inventory() {
+    return all_items;
+        }
+  
+function set_new_item() {
+    return item_name,item_count;
+console.log("Added to DataBase");
+          }
 
   /*set to module.exports obj*/
   /*return 2functions to be json format*/
-
 
 
 
